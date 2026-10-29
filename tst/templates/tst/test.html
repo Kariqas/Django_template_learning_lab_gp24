@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>True</h1>
+    <hr>
+    <h2>Cars List</h2>
+    <p>{{ cars|length }}</p>
+
+    {% for car in cars %}
+        <div style="display: flex; width: 250px; height: 60px; justify-content: space-between; align-items: center; border: 1px solid black; padding: 0 20px; box-sizing: border-box;">
+            <div>{{ car.model }}</div>
+            <div>-</div>
+            <div>$ {{ car.price }}</div>
+            <div>-</div>
+            <div>{{ car.year }}</div>
+        </div>
+    {% endfor %}
+</body>
+</html>
